@@ -7,9 +7,10 @@ class TileStoryDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget storyDetailsAuthor = Container(
-        padding: const EdgeInsets.only(bottom: 1),
-        child: const Text(FAKE_STORY_AUTHOR));
+    Widget storyDetailsAuthor = const Padding(
+      padding: EdgeInsets.only(bottom: 1),
+      child: Text(FAKE_STORY_AUTHOR),
+    );
 
     Widget storyDetailsTime = Row(
       children: <Widget>[
@@ -26,14 +27,17 @@ class TileStoryDetails extends StatelessWidget {
       children: <Widget>[storyDetailsAuthor, storyDetailsTime],
     );
 
-    Widget saveStory = Container(
-        padding: const EdgeInsets.only(right: 10), child: bookmarkIcon);
+    Widget saveStory = Padding(
+      padding: const EdgeInsets.only(right: 10),
+      child: bookmarkIcon,
+    );
 
-    return Container(
-        padding: const EdgeInsets.only(top: 18),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[storyDetails, saveStory],
-        ));
+    return Padding(
+      padding: const EdgeInsets.only(top: 18),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[storyDetails, saveStory],
+      ),
+    );
   }
 }

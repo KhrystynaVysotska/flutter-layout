@@ -7,9 +7,10 @@ class CardStoryDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget storyDetailsAuthor = Container(
-        padding: const EdgeInsets.only(bottom: 1),
-        child: const Text(FAKE_STORY_AUTHOR));
+    Widget storyDetailsAuthor = const Padding(
+      padding: EdgeInsets.only(bottom: 1),
+      child: Text(FAKE_STORY_AUTHOR),
+    );
 
     Widget storyDetailsTime = Row(
       children: <Widget>[
@@ -21,10 +22,11 @@ class CardStoryDetails extends StatelessWidget {
       ],
     );
 
-    return Container(
-        padding: const EdgeInsets.only(top: 20, left: 15),
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[storyDetailsAuthor, storyDetailsTime]));
+    return Padding(
+      padding: const EdgeInsets.only(top: 20, left: 15),
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[storyDetailsAuthor, storyDetailsTime]),
+    );
   }
 }

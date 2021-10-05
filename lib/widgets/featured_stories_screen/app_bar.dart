@@ -8,20 +8,26 @@ class FeaturedStoriesScreenAppBar extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    Widget pageTitle = Container(
-        padding: const EdgeInsets.only(top: 50),
-        child: const Text(
-          'Featured stories',
-          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 23),
-        ));
+    Widget pageTitle = const Padding(
+      padding: EdgeInsets.only(top: 50),
+      child: Text(
+        'Featured stories',
+        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 23),
+      ),
+    );
 
-    Widget arrowBack = Container(
-        padding: const EdgeInsets.only(top: 50), child: arrowBackIcon);
+    Widget arrowBack = Padding(
+      padding: const EdgeInsets.only(top: 50),
+      child: arrowBackIcon,
+    );
 
-    Widget followButton = Container(
-        padding: const EdgeInsets.only(right: 20, top: 70),
-        child: Text("Follow",
-            style: TextStyle(color: Colors.green.shade900, fontSize: 15)));
+    Widget followButton = Padding(
+      padding: const EdgeInsets.only(right: 20, top: 70),
+      child: Text(
+        "Follow",
+        style: TextStyle(color: Colors.green.shade900, fontSize: 15),
+      ),
+    );
 
     return AppBar(
       elevation: 1.5,

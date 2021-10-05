@@ -9,15 +9,18 @@ class TileStoryPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget storyPreviewTitle = Container(
-        padding: const EdgeInsets.only(bottom: 1),
-        child: const Text(
-          FAKE_STORY_TITLE,
-          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 17),
-        ));
+    Widget storyPreviewTitle = const Padding(
+      padding: EdgeInsets.only(bottom: 1),
+      child: Text(
+        FAKE_STORY_TITLE,
+        style: TextStyle(fontWeight: FontWeight.w500, fontSize: 17),
+      ),
+    );
 
-    Widget storyPreviewDescription = Text(FAKE_STORY_DESCRIPTION,
-        style: TextStyle(color: Colors.black.withOpacity(0.6)));
+    Widget storyPreviewDescription = Text(
+      FAKE_STORY_DESCRIPTION,
+      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+    );
 
     Widget storyPreviewImage = TileStoryImage(imageId: imageId);
 

@@ -17,7 +17,7 @@ class StoryPreviewListTile extends StatelessWidget {
       ],
     );
 
-    return Container(
+    return Padding(
         padding:
             const EdgeInsets.only(top: 10, bottom: 10, left: 18, right: 18),
         child: listTile);
