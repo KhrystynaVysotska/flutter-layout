@@ -9,6 +9,8 @@ class FeaturedStoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
         child: Scaffold(
-            appBar: FeaturedStoriesScreenAppBar(), body: StoryPreviewList()));
+      appBar: FeaturedStoriesScreenAppBar(),
+      body: StoryPreviewList(),
+    ));
   }
 }

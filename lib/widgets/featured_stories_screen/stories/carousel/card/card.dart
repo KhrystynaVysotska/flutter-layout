@@ -20,8 +20,9 @@ class StoryPreviewCard extends StatelessWidget {
     );
 
     Widget cardContent = Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[cardStoryImage, cardStoryText]);
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[cardStoryImage, cardStoryText],
+    );
 
     return Card(
       elevation: 0,
