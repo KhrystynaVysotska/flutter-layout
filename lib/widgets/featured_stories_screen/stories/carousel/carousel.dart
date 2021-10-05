@@ -14,7 +14,7 @@ class StoryPreviewCarousel extends StatelessWidget {
         color: Colors.black,
         height: CAROUSEL_HEIGHT,
         margin: const EdgeInsets.only(bottom: 15),
-        padding: const EdgeInsets.only(bottom: 13, top: 13),
+        padding: const EdgeInsets.symmetric(vertical: 13),
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {

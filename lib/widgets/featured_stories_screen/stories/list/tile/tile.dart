@@ -18,8 +18,8 @@ class StoryPreviewListTile extends StatelessWidget {
     );
 
     return Padding(
-        padding:
-            const EdgeInsets.only(top: 10, bottom: 10, left: 18, right: 18),
-        child: listTile);
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 18),
+      child: listTile,
+    );
   }
 }
