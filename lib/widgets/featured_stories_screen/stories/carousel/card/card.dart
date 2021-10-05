@@ -4,15 +4,38 @@ import 'card_story_preview.dart';
 import 'package:flutter/material.dart';
 
 class StoryPreviewCard extends StatelessWidget {
-  const StoryPreviewCard({Key? key, required this.imageId}) : super(key: key);
+  const StoryPreviewCard({
+    Key? key,
+    required this.imageId,
+    required this.title,
+    required this.description,
+    required this.author,
+    required this.timeDetails,
+    required this.isStarred,
+  }) : super(key: key);
 
   final int imageId;
+  final String title;
+  final String author;
+  final bool isStarred;
+  final String description;
+  final String timeDetails;
 
   @override
   Widget build(BuildContext context) {
     Widget cardStoryText = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const <Widget>[CardStoryPreview(), CardStoryDetails()],
+      children: <Widget>[
+        CardStoryPreview(
+          title: title,
+          description: description,
+        ),
+        CardStoryDetails(
+          author: author,
+          timeDetails: timeDetails,
+          isStarred: isStarred,
+        )
+      ],
     );
 
     Widget cardStoryImage = CardStoryImage(

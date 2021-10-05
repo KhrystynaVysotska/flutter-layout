@@ -11,17 +11,26 @@ class StoryPreviewCarousel extends StatelessWidget {
     final imageIdRandomizer = Random();
 
     return Container(
-        color: Colors.black,
-        height: CAROUSEL_HEIGHT,
-        margin: const EdgeInsets.only(bottom: 15),
-        padding: const EdgeInsets.symmetric(vertical: 13),
-        child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              final imageId = index <= NETWORK_IMAGES_MAX_ID
-                  ? index
-                  : imageIdRandomizer.nextInt(NETWORK_IMAGES_MAX_ID);
-              return StoryPreviewCard(imageId: imageId);
-            }));
+      color: Colors.black,
+      height: CAROUSEL_HEIGHT,
+      margin: const EdgeInsets.only(bottom: 15),
+      padding: const EdgeInsets.symmetric(vertical: 13),
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          final imageId = index <= NETWORK_IMAGES_MAX_ID
+              ? index
+              : imageIdRandomizer.nextInt(NETWORK_IMAGES_MAX_ID);
+          return StoryPreviewCard(
+            imageId: imageId,
+            title: FAKE_STORY_TITLE,
+            description: FAKE_STORY_DESCRIPTION,
+            author: FAKE_STORY_AUTHOR,
+            timeDetails: FAKE_STORY_TIME_DETAILS,
+            isStarred: true,
+          );
+        },
+      ),
+    );
   }
 }
