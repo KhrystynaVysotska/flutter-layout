@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/assets/constants.dart';
 import 'package:flutter_layout/widgets/featured_stories_screen/stories/list/tile/tile.dart';
@@ -9,8 +8,6 @@ class StoryPreviewList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageIdRandomizer = Random();
-
     return ListView.builder(itemBuilder: (context, index) {
       if (index == 0) return const StoryPreviewCarousel();
 
@@ -18,12 +15,8 @@ class StoryPreviewList extends StatelessWidget {
 
       final actualIndex = index ~/ 2;
 
-      final imageId = actualIndex <= NETWORK_IMAGES_MAX_ID
-          ? actualIndex
-          : imageIdRandomizer.nextInt(NETWORK_IMAGES_MAX_ID);
-
       return StoryPreviewListTile(
-        imageId: imageId,
+        imageId: actualIndex,
         title: FAKE_STORY_TITLE,
         description: FAKE_STORY_DESCRIPTION,
         author: FAKE_STORY_AUTHOR,
