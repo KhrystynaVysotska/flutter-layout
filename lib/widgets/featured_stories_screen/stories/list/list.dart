@@ -22,7 +22,14 @@ class StoryPreviewList extends StatelessWidget {
           ? actualIndex
           : imageIdRandomizer.nextInt(NETWORK_IMAGES_MAX_ID);
 
-      return StoryPreviewListTile(imageId: imageId);
+      return StoryPreviewListTile(
+        imageId: imageId,
+        title: FAKE_STORY_TITLE,
+        description: FAKE_STORY_DESCRIPTION,
+        author: FAKE_STORY_AUTHOR,
+        timeDetails: FAKE_STORY_TIME_DETAILS,
+        isStarred: true,
+      );
     });
   }
 }

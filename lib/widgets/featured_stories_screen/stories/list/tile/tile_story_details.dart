@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/assets/icons.dart';
-import 'package:flutter_layout/assets/constants.dart';
 
 class TileStoryDetails extends StatelessWidget {
-  const TileStoryDetails({Key? key}) : super(key: key);
+  const TileStoryDetails({
+    Key? key,
+    required this.author,
+    required this.timeDetails,
+    required this.isStarred,
+  }) : super(key: key);
+
+  final String author;
+  final String timeDetails;
+  final bool isStarred;
 
   @override
   Widget build(BuildContext context) {
-    Widget storyDetailsAuthor = const Padding(
-      padding: EdgeInsets.only(bottom: 1),
-      child: Text(FAKE_STORY_AUTHOR),
+    Widget storyDetailsAuthor = Padding(
+      padding: const EdgeInsets.only(bottom: 1),
+      child: Text(author),
     );
 
     Widget storyDetailsTime = Row(
       children: <Widget>[
         Text(
-          FAKE_STORY_TIME_DETAILS,
+          timeDetails,
           style: TextStyle(fontSize: 13, color: Colors.black.withOpacity(0.6)),
         ),
-        starIcon
+        if (isStarred) starIcon
       ],
     );
 

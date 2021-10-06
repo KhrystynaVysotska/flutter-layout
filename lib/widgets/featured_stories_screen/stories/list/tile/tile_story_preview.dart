@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_layout/assets/constants.dart';
 import 'package:flutter_layout/widgets/featured_stories_screen/stories/list/tile/tile_story_image.dart';
 
 class TileStoryPreview extends StatelessWidget {
-  const TileStoryPreview({Key? key, required this.imageId}) : super(key: key);
+  const TileStoryPreview({
+    Key? key,
+    required this.imageId,
+    required this.title,
+    required this.description,
+  }) : super(key: key);
 
   final int imageId;
+  final String title;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
-    Widget storyPreviewTitle = const Padding(
-      padding: EdgeInsets.only(bottom: 1),
+    Widget storyPreviewTitle = Padding(
+      padding: const EdgeInsets.only(bottom: 1),
       child: Text(
-        FAKE_STORY_TITLE,
-        style: TextStyle(fontWeight: FontWeight.w500, fontSize: 17),
+        title,
+        style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 17),
       ),
     );
 
     Widget storyPreviewDescription = Text(
-      FAKE_STORY_DESCRIPTION,
+      description,
       style: TextStyle(color: Colors.black.withOpacity(0.6)),
     );
 
