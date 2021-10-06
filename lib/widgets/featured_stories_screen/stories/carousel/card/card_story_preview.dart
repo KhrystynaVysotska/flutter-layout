@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_layout/assets/constants.dart';
 
 class CardStoryPreview extends StatelessWidget {
   const CardStoryPreview({

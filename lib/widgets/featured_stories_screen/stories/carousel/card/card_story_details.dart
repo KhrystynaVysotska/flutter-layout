@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/assets/icons.dart';
-import 'package:flutter_layout/assets/constants.dart';
 
 class CardStoryDetails extends StatelessWidget {
   const CardStoryDetails({
