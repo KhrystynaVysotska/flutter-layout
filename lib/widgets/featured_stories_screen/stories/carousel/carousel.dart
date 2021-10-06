@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'card/card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/assets/constants.dart';
@@ -8,8 +7,6 @@ class StoryPreviewCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageIdRandomizer = Random();
-
     return Container(
       color: Colors.black,
       height: CAROUSEL_HEIGHT,
@@ -18,11 +15,8 @@ class StoryPreviewCarousel extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          final imageId = index <= NETWORK_IMAGES_MAX_ID
-              ? index
-              : imageIdRandomizer.nextInt(NETWORK_IMAGES_MAX_ID);
           return StoryPreviewCard(
-            imageId: imageId,
+            imageId: index,
             title: FAKE_STORY_TITLE,
             description: FAKE_STORY_DESCRIPTION,
             author: FAKE_STORY_AUTHOR,
